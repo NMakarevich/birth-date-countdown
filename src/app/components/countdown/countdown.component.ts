@@ -27,7 +27,7 @@ export class CountdownComponent implements OnInit {
 
   stringifyTimeLeft() {
     function stringifyDaysWord(days: number) {
-      return days % 10 === 1 && days > 20
+      return days === 1 || (days % 10 === 1 && days > 20)
         ? 'день'
         : days % 10 === 0 ||
           (days % 10 > 4 && days > 20) ||
@@ -36,7 +36,10 @@ export class CountdownComponent implements OnInit {
         : 'дня';
     }
     let currentTime = new Date(this.date).getTime() - Date.now();
-    if (currentTime <= 0) currentTime = 0;
+    if (currentTime <= 0) {
+      currentTime = 0;
+      localStorage.removeItem('date');
+    }
     const [days, hours, minutes, seconds] = [
       60 * 60 * 1000 * 24,
       60 * 60 * 1000,
