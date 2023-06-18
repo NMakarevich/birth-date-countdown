@@ -1,5 +1,5 @@
 {
-  "name": "birthday-countdown",
+  "name": "date-countdown",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
