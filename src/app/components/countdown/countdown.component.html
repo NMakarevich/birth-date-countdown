@@ -10,7 +10,7 @@
       <span class='material-symbols-outlined' (click)='toggleEditMode()'>edit_off</span>
     </div>
   </div>
-  <div class='countdown'>
+  <div *ngIf='date' class='countdown'>
     <p>{{countdown}}</p>
     <div (click)='openDateInput()'>
       <span *ngIf='!openedDateInput' class="material-symbols-outlined">
