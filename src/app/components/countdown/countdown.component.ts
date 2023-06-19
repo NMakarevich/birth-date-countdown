@@ -31,7 +31,8 @@ export class CountdownComponent implements OnInit {
         ? 'день'
         : days % 10 === 0 ||
           (days % 10 > 4 && days > 20) ||
-          (days > 4 && days < 21)
+          (days > 4 && days < 21) ||
+          (days % 100 > 10 && days % 100 < 19)
         ? 'дней'
         : 'дня';
     }
