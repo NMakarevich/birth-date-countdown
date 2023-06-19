@@ -12,6 +12,8 @@ export class InputDateComponent implements OnInit {
 
   isSafari = false;
 
+  placeholder!: string;
+
   @Output('setDate') setDate: EventEmitter<string> = new EventEmitter<string>();
 
   @Output('toggleDateInput') toggleDateInput: EventEmitter<boolean> =
@@ -30,6 +32,7 @@ export class InputDateComponent implements OnInit {
     this.isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 
     this.minDate = new Date().toISOString().slice(0, 16);
+    this.placeholder = `пример: ${this.minDate}`;
     this.date = localStorage.getItem('date') || '';
     localStorage.setItem('date', this.date);
     Promise.resolve().then(() => {
