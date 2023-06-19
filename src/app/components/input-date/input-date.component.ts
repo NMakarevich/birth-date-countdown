@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import toISOStringWithTZ from '../../utils/utils';
 
 @Component({
   selector: 'app-input-date',
@@ -31,7 +32,7 @@ export class InputDateComponent implements OnInit {
   ngOnInit() {
     this.isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 
-    this.minDate = new Date().toISOString().slice(0, 16);
+    this.minDate = toISOStringWithTZ(new Date());
     this.placeholder = `пример: ${this.minDate}`;
     this.date = localStorage.getItem('date') || '';
     localStorage.setItem('date', this.date);
