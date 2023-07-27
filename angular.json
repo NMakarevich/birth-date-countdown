@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "birthday-countdown": {
+    "event-countdown": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/date-countdown",
+            "outputPath": "dist/event-countdown",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "birthday-countdown:build:production"
+              "browserTarget": "event-countdown:build:production"
             },
             "development": {
-              "browserTarget": "birthday-countdown:build:development"
+              "browserTarget": "event-countdown:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "birthday-countdown:build"
+            "browserTarget": "event-countdown:build"
           }
         },
         "test": {
