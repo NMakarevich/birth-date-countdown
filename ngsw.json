@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1690616154789,
+  "index": "https://NMakarevich.github.io/event-countdown/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://NMakarevich.github.io/event-countdown/favicon.ico",
+        "https://NMakarevich.github.io/event-countdown/index.html",
+        "https://NMakarevich.github.io/event-countdown/main.4b5d557bbc9c5b55.js",
+        "https://NMakarevich.github.io/event-countdown/manifest.webmanifest",
+        "https://NMakarevich.github.io/event-countdown/polyfills.ea52e3e9e3c407a2.js",
+        "https://NMakarevich.github.io/event-countdown/runtime.ba7fb6c441c95bb2.js",
+        "https://NMakarevich.github.io/event-countdown/styles.17666239bdb58b08.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-128x128.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-144x144.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-152x152.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-192x192.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-384x384.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-512x512.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-72x72.png",
+        "https://NMakarevich.github.io/event-countdown/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "https://NMakarevich.github.io/event-countdown/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "https://NMakarevich.github.io/event-countdown/favicon.ico": "f67263e7be0a5a43d9e6c5241d568349bf57513a",
+    "https://NMakarevich.github.io/event-countdown/index.html": "035772d1581b9fa3b256aad48fa05a74d27debf4",
+    "https://NMakarevich.github.io/event-countdown/main.4b5d557bbc9c5b55.js": "e8fd17dd484ba0546c91ff7d238ed2910485cc39",
+    "https://NMakarevich.github.io/event-countdown/manifest.webmanifest": "dd7ddbfe709eeece98a30ed25d62a82522501ccd",
+    "https://NMakarevich.github.io/event-countdown/polyfills.ea52e3e9e3c407a2.js": "ebb3ea836340c134661487857ed83ea62aeeacca",
+    "https://NMakarevich.github.io/event-countdown/runtime.ba7fb6c441c95bb2.js": "bfdb0391c28e98cf936e0d34be59e8b31f19dd46",
+    "https://NMakarevich.github.io/event-countdown/styles.17666239bdb58b08.css": "efc9098f39023b59c2eea199ee82e70c13cc87bf"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
