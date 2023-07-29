@@ -1,6 +1,6 @@
 {
-  "name": "event-countdown",
-  "short_name": "event-countdown",
+  "name": "Event Countdown",
+  "short_name": "Event Countdown",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
