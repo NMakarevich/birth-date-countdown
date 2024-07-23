@@ -1,9 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { InputDateComponent } from '../input-date/input-date.component';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-countdown',
-  templateUrl: './countdown.component.html',
-  styleUrls: ['./countdown.component.scss'],
+    selector: 'app-countdown',
+    templateUrl: './countdown.component.html',
+    styleUrls: ['./countdown.component.scss'],
+    standalone: true,
+    imports: [NgIf, InputDateComponent]
 })
 export class CountdownComponent implements OnInit {
   title = 'До дня рождения:';

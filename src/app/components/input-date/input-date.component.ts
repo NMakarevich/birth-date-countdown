@@ -2,9 +2,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import toISOStringWithTZ from '../../utils/utils';
 
 @Component({
-  selector: 'app-input-date',
-  templateUrl: './input-date.component.html',
-  styleUrls: ['./input-date.component.scss'],
+    selector: 'app-input-date',
+    templateUrl: './input-date.component.html',
+    styleUrls: ['./input-date.component.scss'],
+    standalone: true
 })
 export class InputDateComponent implements OnInit {
   date!: string;

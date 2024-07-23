@@ -1,9 +1,12 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-input-color',
-  templateUrl: './input-color.component.html',
-  styleUrls: ['./input-color.component.scss'],
+    selector: 'app-input-color',
+    templateUrl: './input-color.component.html',
+    styleUrls: ['./input-color.component.scss'],
+    standalone: true,
+    imports: [NgClass]
 })
 export class InputColorComponent implements OnInit {
   color!: string;
