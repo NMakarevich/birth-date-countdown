@@ -1,32 +1,3 @@
-<div class='container'>
-  <div class='title'>
-    <div class='title-show' *ngIf='!editMode' >
-      <h2>{{title}}</h2>
-      <span class='material-symbols-outlined' (click)='toggleEditMode()'>edit</span>
-    </div>
-    <div class='title-edit' *ngIf='editMode'>
-      <input class='title-edit-input' type='text' name='edit-title' [value]='title' #input>
-      <span class="material-symbols-outlined" (click)='editTitle()'>check</span>
-      <span class='material-symbols-outlined' (click)='toggleEditMode()'>edit_off</span>
-    </div>
-  </div>
-  <div *ngIf='date' class='countdown'>
-    <p>{{countdown}}</p>
-    <div (click)='openDateInput()'>
-      <span *ngIf='!openedDateInput' class="material-symbols-outlined">
-        edit
-      </span>
-      <span *ngIf='openedDateInput' class='material-symbols-outlined'>
-        edit_off
-      </span>
-    </div>
-  </div>
-  <div class='countdown-edit'>
-    <ng-container *ngIf='!date || openedDateInput'>
-      <app-input-date
-        (setDate)='setDate($event)'
-        (toggleDateInput)='toggleDateInput($event)'
-      ></app-input-date>
-    </ng-container>
-  </div>
+<div class='countdown'>
+  <p>{{countdown}}</p>
 </div>

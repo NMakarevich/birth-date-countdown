@@ -1,30 +1,25 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { InputDateComponent } from '../input-date/input-date.component';
+import { Component, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
-    selector: 'app-countdown',
-    templateUrl: './countdown.component.html',
-    styleUrls: ['./countdown.component.scss'],
-    standalone: true,
-    imports: [NgIf, InputDateComponent]
+  selector: 'app-countdown',
+  templateUrl: './countdown.component.html',
+  styleUrls: ['./countdown.component.scss'],
+  standalone: true,
+  imports: [NgIf],
 })
 export class CountdownComponent implements OnInit {
-  title = 'До дня рождения:';
-
   countdown = '';
 
-  openedDateInput = false;
+  data = this.settingsService.getSettingsFromLS();
 
-  editMode = false;
+  currentTime = new Date(this.data.date).getTime() - Date.now();
 
-  date!: string;
-
-  @ViewChild('input') input!: ElementRef;
+  constructor(private readonly settingsService: SettingsService) {}
 
   ngOnInit() {
-    this.title = localStorage.getItem('title') || this.title;
-    const interval = setInterval(() => {
+    setInterval(() => {
       this.countdown = this.stringifyTimeLeft();
     });
   }
@@ -40,10 +35,9 @@ export class CountdownComponent implements OnInit {
         ? 'дней'
         : 'дня';
     }
-    let currentTime = new Date(this.date).getTime() - Date.now();
-    if (currentTime <= 0) {
-      currentTime = 0;
-      localStorage.removeItem('date');
+    this.currentTime = new Date(this.data.date).getTime() - Date.now();
+    if (this.currentTime <= 0 || !this.data.date) {
+      this.currentTime = 0;
     }
     const [days, hours, minutes, seconds] = [
       60 * 60 * 1000 * 24,
@@ -51,8 +45,8 @@ export class CountdownComponent implements OnInit {
       60 * 1000,
       1000,
     ].map((item, index) => {
-      const time = Math.floor(currentTime / item);
-      currentTime = currentTime % item;
+      const time = Math.floor(this.currentTime / item);
+      this.currentTime = this.currentTime % item;
       if (index === 0) {
         return time;
       }
@@ -61,27 +55,5 @@ export class CountdownComponent implements OnInit {
     return `${days} ${stringifyDaysWord(
       days as number
     )} ${hours}:${minutes}:${seconds}`;
-  }
-
-  setDate(date: string) {
-    this.date = date;
-  }
-
-  toggleEditMode() {
-    this.editMode = !this.editMode;
-  }
-
-  toggleDateInput(value: boolean) {
-    this.openedDateInput = value;
-  }
-
-  editTitle() {
-    this.title = this.input.nativeElement.value;
-    localStorage.setItem('title', this.title);
-    this.toggleEditMode();
-  }
-
-  openDateInput() {
-    this.openedDateInput = !this.openedDateInput;
   }
 }

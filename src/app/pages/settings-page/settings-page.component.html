@@ -1,0 +1,22 @@
+<form [formGroup]=form (ngSubmit)='saveSettings()' class='form'>
+  <div class='form-field'>
+    <label for='event'>Текст события:</label>
+    <input class='form-event form-input' type='text' formControlName='event' id='event' />
+  </div>
+  <div class='form-field'>
+    <label for='after-event'>Текст после наступления события:</label>
+    <input class='form-after-event form-input' type='text' formControlName='afterEvent' id='after-event' />
+  </div>
+  <div class='form-field'>
+    <label for='date'>Дата и время события:</label>
+    <input class='form-date form-input' type='datetime-local' [min]='minDate' formControlName='date' placeholder='YYYY-MM-DDThh:mm' id='date'>
+  </div>
+  <div class='form-field'>
+    <label for='color'>Цвет текста:</label>
+    <input class='color' type='color' formControlName='color' id='color' (input)='changeColor($event)'>
+  </div>
+  <div class='form-controls'>
+    <button class='form-controls-button submit' type='submit' [disabled]='form.invalid'>Сохарнить настройки</button>
+    <button class='form-controls-button reset' type='reset' (click)='resetSettings($event)'>Сбросить настройки</button>
+  </div>
+</form>
