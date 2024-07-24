@@ -15,9 +15,10 @@
   gap: 20px;
 
   &-link {
-    color: unset;
-    text-decoration: none;
     padding: 5px;
+    color: unset;
+    font-size: 24px;
+    text-decoration: none;
     transition: text-shadow 0.2s;
 
     &.active {
