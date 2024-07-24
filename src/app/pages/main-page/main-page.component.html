@@ -1,4 +1,9 @@
 <h2 class='event-title'>
   {{!countdownIsFinished || !afterEvent ? event : afterEvent}}
 </h2>
-<app-countdown></app-countdown>
+<ng-container *ngIf='event'>
+  <app-countdown></app-countdown>
+</ng-container>
+<div *ngIf='!event' class='message'>
+  <span>Отсутствует событие. <a routerLink='/settings'>Перейти в настройки</a>, чтобы создать новое событие</span>
+</div>
