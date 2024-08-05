@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1722026950133,
-  "index": "/event-countdown/index.html",
+  "timestamp": 1722889615210,
+  "index": "/event-countown/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/event-countdown/favicon.ico",
-        "/event-countdown/index.html",
-        "/event-countdown/main.0353d9abebea9409.js",
-        "/event-countdown/manifest.webmanifest",
-        "/event-countdown/polyfills.ea52e3e9e3c407a2.js",
-        "/event-countdown/runtime.ba7fb6c441c95bb2.js",
-        "/event-countdown/styles.750acb3192c473f4.css"
+        "/event-countown/favicon.ico",
+        "/event-countown/index.html",
+        "/event-countown/main.fb21cd8ca1e2bd68.js",
+        "/event-countown/manifest.webmanifest",
+        "/event-countown/polyfills.ea52e3e9e3c407a2.js",
+        "/event-countown/runtime.ba7fb6c441c95bb2.js",
+        "/event-countown/styles.750acb3192c473f4.css"
       ],
       "patterns": []
     },
@@ -29,21 +29,21 @@
         "ignoreVary": true
       },
       "urls": [
-        "/event-countdown/assets/icons/img.png"
+        "/event-countown/assets/icons/img.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/event-countdown/assets/icons/img.png": "4bd5ab2a6182d266c3024712a1a27c8e651d2251",
-    "/event-countdown/favicon.ico": "f67263e7be0a5a43d9e6c5241d568349bf57513a",
-    "/event-countdown/index.html": "c82057554ccdd214711ff60b73ac7487562ac4a1",
-    "/event-countdown/main.0353d9abebea9409.js": "af1972d33b3d22b1260240fb4d58d637582b9b74",
-    "/event-countdown/manifest.webmanifest": "b4194ea59d8c4e82142da5c30a5b4612095af678",
-    "/event-countdown/polyfills.ea52e3e9e3c407a2.js": "ebb3ea836340c134661487857ed83ea62aeeacca",
-    "/event-countdown/runtime.ba7fb6c441c95bb2.js": "bfdb0391c28e98cf936e0d34be59e8b31f19dd46",
-    "/event-countdown/styles.750acb3192c473f4.css": "16a1e182eedad9004c6e97ef57de06c6db4599c5"
+    "/event-countown/assets/icons/img.png": "4bd5ab2a6182d266c3024712a1a27c8e651d2251",
+    "/event-countown/favicon.ico": "f67263e7be0a5a43d9e6c5241d568349bf57513a",
+    "/event-countown/index.html": "dcf799509415c99f1e90ffed2554abe7565af9fb",
+    "/event-countown/main.fb21cd8ca1e2bd68.js": "3a2883e908def16eaf5b606392c0d24f43db556e",
+    "/event-countown/manifest.webmanifest": "b4194ea59d8c4e82142da5c30a5b4612095af678",
+    "/event-countown/polyfills.ea52e3e9e3c407a2.js": "ebb3ea836340c134661487857ed83ea62aeeacca",
+    "/event-countown/runtime.ba7fb6c441c95bb2.js": "bfdb0391c28e98cf936e0d34be59e8b31f19dd46",
+    "/event-countown/styles.750acb3192c473f4.css": "16a1e182eedad9004c6e97ef57de06c6db4599c5"
   },
   "navigationUrls": [
     {
