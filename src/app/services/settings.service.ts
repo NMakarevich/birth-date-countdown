@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 export interface LocalStorage {
@@ -24,8 +23,6 @@ export class SettingsService {
     hideTitle: false,
   };
 
-  constructor(private readonly router: Router) {}
-
   getSettingsFromLS(): LocalStorage {
     const data = localStorage.getItem('event-countdown');
     if (data) {
@@ -47,11 +44,11 @@ export class SettingsService {
 
   saveToLS(data: LocalStorage) {
     localStorage.setItem('event-countdown', JSON.stringify(data));
-    this.router.navigate(['/']);
   }
 
   resetSettings() {
     localStorage.clear();
     this.color.next(this.defaultSettings.color);
+    this.saveToLS(this.defaultSettings);
   }
 }

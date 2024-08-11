@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {
   FormBuilder,
   FormControl,
@@ -44,7 +44,8 @@ export class SettingsPageComponent {
 
   constructor(
     private readonly fb: FormBuilder,
-    private readonly settingsService: SettingsService
+    private readonly settingsService: SettingsService,
+    private readonly router: Router
   ) {}
 
   get date() {
@@ -63,6 +64,7 @@ export class SettingsPageComponent {
   saveSettings() {
     const data = this.form.getRawValue();
     this.settingsService.saveToLS(data);
+    this.router.navigate(['/']);
   }
 
   resetSettings(event: Event) {
