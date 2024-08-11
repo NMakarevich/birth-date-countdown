@@ -4,6 +4,6 @@
 <ng-container *ngIf='event'>
   <app-countdown></app-countdown>
 </ng-container>
-<div *ngIf='!event' class='message'>
-  <span>Отсутствует событие. <a routerLink='/settings'>Перейти в настройки</a>, чтобы создать новое событие</span>
+<div *ngIf='!event || countdownIsFinished' class='message'>
+  <span>{{countdownIsFinished ? 'Событие наступило.' : 'Отсутствует событие.'}} <a routerLink='/settings'>Перейти в настройки</a>, чтобы создать новое событие</span>
 </div>
