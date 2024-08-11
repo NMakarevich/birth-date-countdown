@@ -16,6 +16,7 @@ interface Form {
   afterEvent: FormControl<string>;
   date: FormControl<string>;
   color: FormControl<string>;
+  hideTitle: FormControl<boolean>;
 }
 
 @Component({
@@ -38,6 +39,7 @@ export class SettingsPageComponent {
     afterEvent: [this.settings.afterEvent, [Validators.maxLength(128)]],
     date: [this.settings.date, [Validators.required]],
     color: [this.settings.color],
+    hideTitle: [this.settings.hideTitle],
   });
 
   constructor(

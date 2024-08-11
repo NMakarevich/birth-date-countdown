@@ -11,9 +11,13 @@
     <label for='date'>Дата и время события:</label>
     <input class='form-date form-input' type='datetime-local' [min]='minDate' formControlName='date' placeholder='YYYY-MM-DDThh:mm' id='date'>
   </div>
-  <div class='form-field'>
+  <div class='form-field row'>
     <label for='color'>Цвет текста:</label>
     <input class='color' type='color' formControlName='color' id='color' (input)='changeColor($event)'>
+  </div>
+  <div class='form-field row'>
+    <label for='hide-title'>Скрыть название: </label>
+    <input class='form-hide-title' type='checkbox' name='hide-title' id='hide-title' formControlName='hideTitle'>
   </div>
   <div class='form-controls'>
     <button class='form-controls-button submit' type='submit' [disabled]='form.invalid'>Сохранить настройки</button>

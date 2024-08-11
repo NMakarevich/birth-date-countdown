@@ -7,6 +7,7 @@ export interface LocalStorage {
   afterEvent: string;
   color: string;
   date: string;
+  hideTitle: boolean;
 }
 
 @Injectable({
@@ -20,6 +21,7 @@ export class SettingsService {
     afterEvent: '',
     color: '#000000',
     date: '',
+    hideTitle: false,
   };
 
   constructor(private readonly router: Router) {}
@@ -34,8 +36,8 @@ export class SettingsService {
       const color = localStorage.getItem('color') || '#000000';
       const date = localStorage.getItem('date') || '';
       localStorage.clear();
-      this.saveToLS({ event, afterEvent, color, date });
-      return { event, afterEvent, color, date };
+      this.saveToLS({ event, afterEvent, color, date, hideTitle: false });
+      return { event, afterEvent, color, date, hideTitle: false };
     }
   }
 

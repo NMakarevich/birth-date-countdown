@@ -25,4 +25,8 @@ export class AppComponent implements OnInit {
       (color) => (this.elementRef.nativeElement.style.color = color)
     );
   }
+
+  get settings() {
+    return this.settingsService.getSettingsFromLS();
+  }
 }

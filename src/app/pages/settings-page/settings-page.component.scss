@@ -8,6 +8,11 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    &.row {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &-input {
@@ -16,6 +21,41 @@
     border: 1px solid #000000;
     border-radius: 5px;
   }
+
+  &-hide-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 0;
+    height: 0;
+    appearance: none;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 16px;
+      border: 2px solid #000000;
+      border-radius: 10px;
+    }
+
+    &::after {
+      position: absolute;
+      left: 3px;
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #000000;
+      transition: transform 0.2s;
+    }
+
+    &:checked::after {
+      transform: translateX(14px);
+    }
+  }
+
 
   &-controls {
     display: flex;
