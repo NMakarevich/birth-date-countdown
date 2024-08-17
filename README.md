@@ -12,7 +12,7 @@
 - Ability to install app in your device as PWA (progressive web application)
 
 ## Planned features
-- [ ] Ability to hide app title
+- [x] Ability to hide app title
 - [ ] Adding tunable timer up to 24 hours in format HH:MM:SS
 - [ ] Adding translation to English
 
